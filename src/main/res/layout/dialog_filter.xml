@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mediumTextView"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:text="원하는 필터를 선택하세요."
+        android:textColor="@color/black"
+        android:background="#86A7FC"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/filter_time"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="시간순"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="#717171" />
+    <TextView
+
+        android:id="@+id/filter_star"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="별점순"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="#717171" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+    </LinearLayout>
+
+</LinearLayout>

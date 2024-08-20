@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ManagerActivity"
+    android:id="@+id/drawer_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 툴바 -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.App"
+                android:background="#86A7FC">
+            </androidx.appcompat.widget.Toolbar>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:entries="@array/place">
+            </Spinner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:background="@color/black" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postrecycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 왼쪽에 숨어있는 네비게이션 메뉴 영역-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginEnd="-64dp"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/navi_header"
+        app:menu="@menu/navi_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

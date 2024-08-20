@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostViewActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_posttitleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:paddingTop="10dp"
+        android:text="제목"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_postuserview"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="작성자"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:gravity="left"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_posttimeview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:text="시간"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/tv_postplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="위치"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="@color/black" />
+    <ImageView
+        android:id="@+id/iv_postimageview"
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:layout_marginTop="15dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_postcontentsview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내용"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:padding="15dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_baseline_star_24"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_starview"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/pngegg"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_reportview"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="55dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_star"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFDD77"
+            android:text="별점주기"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_report"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="신고하기"
+            android:textStyle="bold"
+            android:backgroundTint="#FB89BA"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="209dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EFEFEF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2">
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"></ImageView>
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="댓글을 입력하세요."
+            android:textSize="15dp"
+            android:paddingLeft="7dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_comment"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/icon_btn" />
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"></ImageView>
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

@@ -1,3 +1,7 @@
+# 🚖 대한민국 여행 리뷰 플랫폼 :: 이곳저곳
+
+![이곳저곳](https://capsule-render.vercel.app/api?type=rect&text=이곳저곳&color=0:1E3A8A,100:60A5FA&fontColor=ffffff&fontSize=50&height=200&fontAlign=50&fontAlignY=50)
+
 2023-1학기 프로젝트
 
 대한민국 이곳저곳 [안드로이드 어플리케이션]
